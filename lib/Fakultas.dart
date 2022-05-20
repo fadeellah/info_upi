@@ -6,23 +6,16 @@ class Fakultas extends StatelessWidget {
   const Fakultas({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ListView(padding: EdgeInsets.all(20), shrinkWrap: true, children: [
-        InkWell(
-          child: Container(
-            decoration: BoxDecoration(border: Border.all()),
-            padding: EdgeInsets.all(14),
-            child: Text("baris 1"),
-          ),
-          onTap: () {
-            //gunakan navigator untuk panggil RincianFakultas
-          },
-        ),
-        Container(
-            decoration: BoxDecoration(border: Border.all()),
-            padding: EdgeInsets.all(14),
-            child: Text("baris kedua")),
-      ]),
-    );
+    return Card(
+        child: ListTile(
+            onTap: () {},
+            leading: Image.network(
+                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+            trailing: const Icon(Icons.more_vert),
+            title: const Text('FIP'),
+            subtitle: const Text("Fakultas Ilmu Pendidikan"),
+            tileColor: Colors.white70),
+            );
+    
   }
 }
